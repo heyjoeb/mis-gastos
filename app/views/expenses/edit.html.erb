@@ -1,0 +1,19 @@
+<nav class="navbar navbar-inverse navbar-static-top expense">
+      <div class="container">
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><h1>Editing Expense</h1></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+<div class="container expense">
+<%= render 'form' %>
+
+<div class="col-md-12">
+<%= link_to 'Show', @expense %> |
+<%= link_to 'Back', expenses_path %>
+</div>
+</div>

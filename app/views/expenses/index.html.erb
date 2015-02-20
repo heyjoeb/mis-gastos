@@ -1,0 +1,46 @@
+<nav class="navbar navbar-inverse navbar-static-top expense">
+      <div class="container">
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><h1>Listing Expenses</h1></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<div class="container expense">
+<p id="notice"><%= notice %></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Fecha</th>
+        <th>Concept</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @expenses.each do |expense| %>
+        <tr>
+          <td><%= expense.category_id %></td>
+          <td><%= expense.fecha %></td>
+          <td><%= expense.concept %></td>
+          <td><%= expense.amount %></td>
+          <td><%= link_to 'Show', expense, :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Edit', edit_expense_path(expense), :class => 'btn btn-info' %></td>
+          <td><%= link_to 'Destroy', expense, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Expense', new_expense_path, :class => 'btn btn-success' %>
+  
+</div>
+
+
+
+
