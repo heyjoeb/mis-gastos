@@ -1,2 +1,2 @@
 # mis-gastos
-challenge #4 (MIR) 
+challenge rails #4 (MIR) 
